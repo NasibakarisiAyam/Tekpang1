@@ -139,3 +139,5 @@ Hasil dapat berubah jika isi `menu.csv` diganti.
 | `ModuleNotFoundError` untuk pandas, matplotlib, atau scipy | Aktifkan virtual environment proyek dan jalankan perintah instalasi pada bagian setup. |
 | `FileNotFoundError: menu.csv` | Letakkan CSV di direktori kerja notebook dan pastikan nama file tepat `menu.csv`. |
 | Kernel tidak menemukan pustaka setelah instalasi | Pilih kernel/interpreter yang sama dengan virtual environment tempat pustaka dipasang, lalu mulai ulang kernel. |
+
+## VIDIO TUTORIAL : https://youtu.be/5VTo8i7oiN4
