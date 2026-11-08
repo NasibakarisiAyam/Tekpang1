@@ -88,16 +88,12 @@ Saat notebook berjalan, direktori kerja Jupyter harus merupakan folder yang beri
 
 1. Buka folder proyek di VS Code.
 2. Pastikan ekstensi **Python** dan **Jupyter** tersedia.
-3. Buka `maman12345.ipynb`, lalu pilih Python interpreter/virtual environment yang sudah dipasangi pustaka di atas sebagai kernel.
+3. Buka `maman12345.ipynb` dan pilih kernel Python yang ingin dipakai. Sel pertama notebook menjalankan `%pip install -r requirements.txt` pada kernel aktif, sehingga dependensi dipasang ke environment yang benar. Pastikan terminal kerja/notebook berada di folder proyek agar `requirements.txt` dan `menu.csv` dapat ditemukan.
 4. Jalankan sel dengan tombol **Run Cell** atau **Shift+Enter**.
 
 ### Menjalankan di Google Colab
 
-Notebook memiliki metadata Google Colab. Unggah `maman12345.ipynb`, `menu.csv`, dan `requirements.txt` ke sesi Colab yang sama sebelum menjalankan sel pembacaan data. Jika pustaka belum tersedia pada runtime, jalankan:
-
-```python
-%pip install -r requirements.txt
-```
+Notebook memiliki metadata Google Colab. Unggah `maman12345.ipynb`, `menu.csv`, dan `requirements.txt` ke sesi Colab yang sama, lalu jalankan sel pertama untuk memasang dependensi ke runtime aktif sebelum menjalankan analisis.
 
 Pastikan file CSV berada pada direktori kerja runtime (biasanya `/content`) dan namanya tetap `menu.csv`, karena notebook menggunakan path relatif tersebut.
 
