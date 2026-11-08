@@ -21,6 +21,7 @@ Kolom nutrisi lainnya tetap tersedia di CSV, tetapi tidak digunakan dalam analis
 .
 ├── maman12345.ipynb  # Notebook analisis
 ├── menu.csv          # Data nutrisi menu
+├── requirements.txt  # Dependensi Python
 └── README.md         # Dokumentasi ini
 ```
 
@@ -30,7 +31,17 @@ Pastikan `maman12345.ipynb` dan `menu.csv` berada di folder yang sama. Notebook 
 
 - Python 3
 - Jupyter Notebook
-- Pustaka Python: `pandas`, `matplotlib`, dan `scipy`
+- Dependensi Python tercantum di `requirements.txt` (Jupyter Notebook, `pandas`, `matplotlib`, dan `scipy`)
+
+## Memasang dependensi
+
+Buka terminal pada folder proyek (folder yang berisi `requirements.txt`), lalu jalankan:
+
+```bash
+pip install -r requirements.txt
+```
+
+Perintah tersebut akan memasang semua pustaka yang tercantum di `requirements.txt`. Jika menggunakan virtual environment, aktifkan terlebih dahulu sebelum menjalankan perintah ini.
 
 ## Setup dan menjalankan secara lokal
 
@@ -55,11 +66,11 @@ Buka PowerShell atau terminal pada folder proyek, lalu jalankan:
    .\.venv\Scripts\Activate.ps1
    ```
 
-3. Pasang Jupyter dan pustaka yang dibutuhkan:
+3. Pasang semua dependensi:
 
    ```powershell
    python -m pip install --upgrade pip
-   python -m pip install notebook pandas matplotlib scipy
+   python -m pip install -r requirements.txt
    ```
 
 4. Jalankan Jupyter Notebook:
@@ -82,10 +93,10 @@ Saat notebook berjalan, direktori kerja Jupyter harus merupakan folder yang beri
 
 ### Menjalankan di Google Colab
 
-Notebook memiliki metadata Google Colab. Unggah `maman12345.ipynb` dan `menu.csv` ke sesi Colab yang sama sebelum menjalankan sel pembacaan data. Jika pustaka belum tersedia pada runtime, jalankan:
+Notebook memiliki metadata Google Colab. Unggah `maman12345.ipynb`, `menu.csv`, dan `requirements.txt` ke sesi Colab yang sama sebelum menjalankan sel pembacaan data. Jika pustaka belum tersedia pada runtime, jalankan:
 
 ```python
-%pip install pandas matplotlib scipy
+%pip install -r requirements.txt
 ```
 
 Pastikan file CSV berada pada direktori kerja runtime (biasanya `/content`) dan namanya tetap `menu.csv`, karena notebook menggunakan path relatif tersebut.
